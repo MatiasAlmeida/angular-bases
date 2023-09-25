@@ -12,8 +12,22 @@
 <button
   *ngIf="heroNames.length > 0"
   (click)="removeLastHero()"
-  class="btn btn-outline-danger">
+  class="btn btn-outline-danger mx-2">
   Borrar último héroe
+</button>
+
+<button
+  *ngIf="deletedHero"
+  (click)="returnLastDeletedHero()"
+  class="btn btn-primary me-2">
+  Retornar último héroe eliminado
+</button>
+
+<button
+  *ngIf="deletedHeroes.length > 1"
+  (click)="returnAllDeletedHeroes()"
+  class="btn btn-dark">
+  Retornar todos lo héroes eliminados
 </button>
 
 <ul class="mt-2 list-group">

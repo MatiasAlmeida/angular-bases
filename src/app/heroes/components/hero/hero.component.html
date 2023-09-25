@@ -11,7 +11,7 @@
   <dd> {{ getHeroDescription() }} </dd>
 
   <td>Capitalizado:</td>
-  <dd> {{ capitalizeName }} </dd>
+  <dd> {{ capitalizedName }} </dd>
 </dl>
 
 <button
@@ -29,6 +29,7 @@
 </button>
 
 <button
+  *ngIf="name !== 'ironman' || age !== 45"
   (click)="resetForm()"
   class="btn btn-primary mx-2">
   Reset
