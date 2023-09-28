@@ -3,11 +3,11 @@ import { DbzService } from '../services/dbz.service';
 import { Character } from '../interfaces/character.interface';
 
 @Component({
-  selector: 'app-dbz-main-page',
+  selector: 'dbz-main-page',
   templateUrl: './main-page.component.html'
 })
 
-export class DbzMainPageComponent {
+export class MainPageComponent {
   constructor( private dbzService: DbzService ) {}
 
   get characters(): Character[] {

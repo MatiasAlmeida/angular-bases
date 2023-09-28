@@ -20,6 +20,9 @@ export class AddCharacterComponent {
     // debugger;
     // console.log(this.character);
     if ( this.character.name.length === 0) return;
+    // this.onNewCharacter.emit({...this.character}); // hace lo mismo que abajo, angular se encarga de mandar
+    // los objetos separado por sus propiedades por default (lo que hace el operador spread en javascript)
+    // en un nuevo objeto para romper la referencia con el objeto original
     this.onNewCharacter.emit(this.character);
     this.character = { name: '', power: 0 };
   }

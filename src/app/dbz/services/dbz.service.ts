@@ -32,6 +32,7 @@ export class DbzService {
   }
 
   deleteCharacterById(id: string): void {
+    // this.characters.splice(id, 1); // antes usabamos el index del elemento que era un number
     this.characters = this.characters.filter(
       character => character.id !== id
     );
